@@ -4,13 +4,25 @@ import { Command } from "commander";
 import chalk from "chalk";
 import fs from "fs-extra";
 import * as path from "path";
+import { fileURLToPath } from "url";
+
+let __dirname;
+try {
+  const __filename = fileURLToPath(import.meta.url);
+  __dirname = path.dirname(__filename);
+} catch (e) {
+  __dirname = path.dirname(require.main?.filename || ".");
+}
+
+const packageJsonPath = path.join(__dirname, "../package.json");
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
 
 const program = new Command();
 
 program
   .name("noriko")
   .description("CLI untuk noriko-react-ui")
-  .version("0.1.0");
+  .version(packageJson.version);
 
 program
   .command("add")
@@ -18,7 +30,7 @@ program
   .action(async (component) => {
     const componentDir = path.resolve(
       process.cwd(),
-      "node_modules/@yuisalabs/noriko-react-ui/components/ui",
+      "node_modules/@yuisalabs/noriko-react-ui/src/components/ui",
       component
     );
 
