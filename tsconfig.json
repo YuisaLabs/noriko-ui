@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "noriko-react-ui": ["packages/noriko-react-ui/src"]
-    }
+    },
+    "lib": ["es2015"]
   }
 }
