@@ -18,7 +18,7 @@ program
   .action(async (component) => {
     const componentDir = path.resolve(
       process.cwd(),
-      "node_modules/noriko-react-ui/components",
+      "node_modules/@yuisalabs/noriko-react-ui/components/ui",
       component
     );
 
