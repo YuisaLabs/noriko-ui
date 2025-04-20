@@ -1,11 +1,11 @@
 {
   "name": "@yuisalabs/noriko-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "bin": {
-    "noriko": "bin/noriko.js"
+    "noriko": "bin/index.js"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm --out-dir bin --splitting false --clean"
+    "build": "tsup"
   },
   "dependencies": {
     "chalk": "^5.3.0",
