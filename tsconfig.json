@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "noriko-react-ui": ["packages/noriko-react-ui/src"]
+    }
+  }
+}
