@@ -1,1 +1,4 @@
+.turbo
+bin
+dist
 node_modules
