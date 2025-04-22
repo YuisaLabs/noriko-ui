@@ -1,0 +1,26 @@
+{
+  "name": "noriko-ui",
+  "version": "0.1.0",
+  "description": "React UI Component Library",
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "npm@10.9.2",
+  "scripts": {
+    "build": "turbo run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuisaLabs/noriko-ui.git"
+  },
+  "author": "yuisalabs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YuisaLabs/noriko-ui/issues"
+  },
+  "homepage": "https://github.com/YuisaLabs/noriko-ui#readme",
+  "devDependencies": {
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.3"
+  }
+}

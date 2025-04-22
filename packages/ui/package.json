@@ -1,0 +1,32 @@
+{
+  "name": "@yuisalabs/noriko",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup "
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwind-merge": "^3.2.0",
+    "tailwind-variants": "^1.0.0",
+    "tailwindcss": "^4.1.4"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "react": "^19.1.0",
+    "react-aria-components": "^1.8.0",
+    "react-dom": "^19.1.0"
+  }
+}
