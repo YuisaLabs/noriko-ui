@@ -4,7 +4,7 @@ import chalk from "chalk"
 
 function addComponent(name: string, targetDir: string) {
   const componentMap: Record<string, string> = {
-    button: path.resolve(__dirname, "../../../ui/src/components/button.tsx"),
+    button: path.resolve(__dirname, "../../../packages/ui/src/components/button.tsx"),
   }
 
   const src = componentMap[name];

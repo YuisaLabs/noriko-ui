@@ -1,7 +1,10 @@
 {
   "name": "@yuisalabs/noriko-ui",
-  "version": "0.1.0",
-  "main": "index.js",
+  "version": "0.1.4",
+  "type": "commonjs",
+  "bin": {
+    "noriko": "dist/index.js"
+  },
   "scripts": {
     "build": "tsup"
   },
