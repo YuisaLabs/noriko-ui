@@ -12,11 +12,16 @@
   "license": "MIT",
   "description": "",
   "devDependencies": {
+    "@types/degit": "^2.8.6",
     "@types/fs-extra": "^11.0.4",
     "chalk": "^5.4.1",
     "commander": "^13.1.0",
     "fs-extra": "^11.3.0",
+    "ora": "^8.2.0",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "degit": "^2.8.4"
   }
 }

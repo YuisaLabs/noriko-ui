@@ -1,14 +1,14 @@
 import fs from "fs-extra";
 import path from "path";
 import chalk from "chalk"
+import { components } from "../utils/components";
 
 function addComponent(name: string, targetDir: string) {
-  const componentMap: Record<string, string> = {
-    button: path.resolve(__dirname, "../../../packages/ui/src/components/button.tsx"),
-  }
+  const component = components.find(
+    (component) => component.name.toLowerCase() === name.toLowerCase()
+  );
 
-  const src = componentMap[name];
-  if (!src) {
+  if (!component) {
     console.error(chalk.red(`Component ${name} not found.`));
     process.exit(1);
   }
@@ -21,7 +21,7 @@ function addComponent(name: string, targetDir: string) {
   }
 
   fs.ensureDirSync(path.dirname(destinationDir));
-  fs.copyFileSync(src, destinationDir);
+  fs.copyFileSync(component.path, destinationDir);
 
   console.log(chalk.green(`Component ${name} added to ${targetDir}.`));
 }
