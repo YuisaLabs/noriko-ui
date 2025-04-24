@@ -1,9 +1,12 @@
 import fs from "fs-extra";
 import path from "path";
 import chalk from "chalk"
-import { components } from "../utils/components";
 
-function addComponent(name: string, targetDir: string) {
+import { components } from "../utils/components";
+import { BASE_URL } from "../utils/config";
+import { fetchComponent } from "../utils/fetch";
+
+async function addComponent(name: string, targetDir: string) {
   const component = components.find(
     (component) => component.name.toLowerCase() === name.toLowerCase()
   );
@@ -20,8 +23,8 @@ function addComponent(name: string, targetDir: string) {
     return;
   }
 
-  fs.ensureDirSync(path.dirname(destinationDir));
-  fs.copyFileSync(component.path, destinationDir);
+  const fileUrl = `${BASE_URL}${component.path}`;
+  await fetchComponent(fileUrl, destinationDir);
 
   console.log(chalk.green(`Component ${name} added to ${targetDir}.`));
 }
