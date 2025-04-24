@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "../utils/classes";
+import { cn } from "@/utils/classes";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
